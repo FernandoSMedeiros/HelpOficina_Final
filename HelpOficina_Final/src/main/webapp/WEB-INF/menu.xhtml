@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+       
+        <h:form id="frmMenu">
+
+            <p:menubar>
+
+                <p:menuitem value="Inicio" icon="ui-icon-home" action="home.xhtml"/>                
+
+                <p:submenu label="Cliente">
+
+                    <p:menuitem value="Cadastrar" actionListener="#{clienteBean.novo()}" action="CadCli.xhtml"/>   
+                    <p:menuitem value="Visualizar" actionListener="#{clienteBean.buscarTodos()}" action="ListaCliente.xhtml"/>                  
+
+                </p:submenu>
+
+                <p:submenu label="Ordem Servico">
+
+                    <p:menuitem value="Nova OS" action="os.xhtml"/>   
+                    <p:menuitem value="Listar OS"/>                  
+                    <p:menuitem value="Relatorio"/>                  
+
+                </p:submenu>
+
+                <p:menuitem value="Sair" actionListener="#{loginBean.logOut}"/>
+
+            </p:menubar>
+           
+            
+        </h:form>
+        
+    </h:body>
+</html>
+

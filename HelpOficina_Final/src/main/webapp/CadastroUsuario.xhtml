@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        
+        
+        <h:form id="formCad">
+
+                <h:outputLabel value="Nome:" for="nome"/>
+                <p:inputText value="#{usuarioBean.nome}" id="nome"/>
+                <h:outputLabel value="CPF:" for="cp"/>
+                <p:inputMask mask="999.999.999-99" value="#{usuarioBean.cpf}" id="cp"/>
+                <h:outputLabel value="Senha:" for="pass"/>
+                <p:password value="#{usuarioBean.senha}" id="pass" required="true" requiredMessage="A senha é obrigatoria"/>
+                <center>
+                    <p:commandButton value="Cadastrar" actionListener="#{usuarioBean.salvar()}" oncomplete="PF('widCad').hide()"/>
+                </center>
+            </h:form>
+        
+        
+    </h:body>
+</html>
+

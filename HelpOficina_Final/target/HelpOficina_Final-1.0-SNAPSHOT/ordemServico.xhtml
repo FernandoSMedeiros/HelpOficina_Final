@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <ui:include src="menu.xhtml"/>
+
+        <h:form id="main">
+
+            <h:panelGrid columns="2">
+
+                <p:commandButton value="Selecionar Cliente" onclick = "PF('widSelectCli').show()"/>
+                <p:commandButton value="Adicionar aparelho" onclick = "PF('widSetAp').show()"/>
+
+            </h:panelGrid>
+
+            <h:panelGrid columns="2">
+
+                <p:fieldset toggleable="true" legend="Dados Cliente" collapsed="true">
+
+                    <h:panelGrid columns="2">
+                    <h:outputLabel value="Nome do cliente:"/>
+                    <h:outputText value="#{clienteController.selectedCliente.nome}" />
+                    <h:outputLabel value="CPF: "/>
+                    <h:outputText value="#{clienteController.selectedCliente.cpf}" />
+                    <h:outputLabel value="RG: "/>
+                    <h:outputText value="#{clienteController.selectedCliente.rg}" />
+                    <h:outputLabel value="Orgão Expedidor:"/>
+                    <h:outputText value="#{clienteController.selectedCliente.expedidor}" />
+
+                    </h:panelGrid>
+                    
+                </p:fieldset>
+
+                <p:fieldset toggleable="true" legend="Dados Produto" collapsed="true">
+
+                    oifdgh
+
+                </p:fieldset>
+
+                <p:commandButton value="Salvar" />
+
+            </h:panelGrid>
+
+        </h:form>
+
+
+        <p:dialog id="dialogCli" widgetVar="widSelectCli" modal="true" closable="true" 
+                  closeOnEscape="true" draggable="false" width="821" height="300" resizable="false">
+
+            <h:form id="selectCli">
+
+                <p:dataTable value="#{clienteController.recuperarTodosAction()}" var="cliente" id="clientes" paginator="true" rows="4"
+                             paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"  
+                             selection="#{clienteController.selectedCliente}" selectionMode="single" rowKey="#{cliente.idCliente}" >
+
+
+                    <p:column headerText="Nome" sortBy="#{cliente.nome}">
+                        <h:outputText value="#{cliente.nome}"/>
+                    </p:column>
+
+                    <p:column headerText="CPF / CNPJ">
+                        <h:outputText value="#{cliente.cpf}"/>
+                    </p:column>
+
+                    <p:column headerText="RG">
+                        <h:outputText value="#{cliente.rg}"/>
+                    </p:column>                 
+
+                </p:dataTable>
+                
+                <p:commandButton update="main" oncomplete="PF('widSelectCli').hide()"/>
+                
+            </h:form>
+            
+        </p:dialog>
+        
+         <p:dialog id="dialogAp" widgetVar="widSetAp" modal="true" closable="true" 
+                  closeOnEscape="true" draggable="false" width="821" height="300" resizable="false">
+
+            
+            
+        </p:dialog>
+
+    </h:body>
+</html>
+

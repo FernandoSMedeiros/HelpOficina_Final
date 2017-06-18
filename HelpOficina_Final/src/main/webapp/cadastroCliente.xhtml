@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+
+        <ui:include src="menu.xhtml"/>
+        <h:form>
+            <p:panelGrid columns="4">        
+
+                <h:outputLabel value="CPF:" for="cpf"/>
+                <p:inputText value="#{clienteBean.cliente.cpf}" id="cpf"/>
+
+                <h:outputLabel value="Nome: " for="nome"/>
+                <p:inputText value="#{clienteBean.cliente.nome}" id="nome" />
+
+                <h:outputLabel value="RG:" for="rg"/>
+                <p:inputNumber value="#{clienteBean.cliente.rg}" id="rg"/>
+
+                <h:outputLabel value="Org. Expedidor:" for="org"/>
+                <p:inputText value="#{clienteBean.cliente.expedidor}" id="org"/>       
+
+                <h:outputLabel value="Tipo Logradouro:" for="tipo"/>
+                <p:inputText value="#{clienteBean.cliente.endereco.tipoLogradouro}" id="tipo" />
+
+                <h:outputLabel value="Logradouro:" for="log"/>
+                <p:inputText value="#{clienteBean.cliente.endereco.logradouro}" id="log" />
+
+                <h:outputLabel value="Numero:" for="num"/>
+                <p:inputText value="#{clienteBean.cliente.endereco.numero}" id="num" />
+
+                <h:outputLabel value="Complemento" for="comp"/>
+                <p:inputText value="#{clienteBean.cliente.endereco.complemento}" id="comp" />
+
+                <h:outputLabel value="Bairro" for="bairro"/>
+                <p:inputText value="#{clienteBean.cliente.endereco.bairro}" id="bairro" />
+
+                <h:outputLabel value="Cidade:" for="cid"/>
+                <p:inputText value="#{clienteBean.cliente.endereco.cidade}" id="cid" />
+
+                <h:outputLabel value="UF:" for="console"/>
+                <p:selectOneMenu id="console" value="#{clienteBean.cliente.endereco.uf}" style="width:60px">
+                    <f:selectItem itemLabel="AC" itemValue="AC"/>	 
+                    <f:selectItem itemLabel="AL" itemValue="AL"/>	 
+                    <f:selectItem itemLabel="AP" itemValue="AP"/>	 
+                    <f:selectItem itemLabel="AM" itemValue="AM"/>	 
+                    <f:selectItem itemLabel="BA" itemValue="BA"/>	 
+                    <f:selectItem itemLabel="CE" itemValue="CE"/>	 
+                    <f:selectItem itemLabel="DF" itemValue="DF"/>	 
+                    <f:selectItem itemLabel="ES" itemValue="ES"/>	 
+                    <f:selectItem itemLabel="GO" itemValue="GO"/>	 
+                    <f:selectItem itemLabel="MA" itemValue="MA"/>	 
+                    <f:selectItem itemLabel="MT" itemValue="MT"/>	 
+                    <f:selectItem itemLabel="MS" itemValue="MS"/>	 
+                    <f:selectItem itemLabel="MG" itemValue="MG"/>	 
+                    <f:selectItem itemLabel="PA"  itemValue="PA"/>	 
+                    <f:selectItem itemLabel="PB" itemValue="PB"/>	 
+                    <f:selectItem itemLabel="PR" itemValue="PR"/>	 
+                    <f:selectItem itemLabel="PE" itemValue="PE"/>	 
+                    <f:selectItem itemLabel="PI" itemValue="PI"/>	 
+                    <f:selectItem itemLabel="RJ" itemValue="RJ"/>	 
+                    <f:selectItem itemLabel="RN" itemValue="RN"/>	 
+                    <f:selectItem itemLabel="RS" itemValue="RS"/>	 
+                    <f:selectItem itemLabel="RO" itemValue="RO"/>	 
+                    <f:selectItem itemLabel="RR" itemValue="RR"/>	 
+                    <f:selectItem itemLabel="SC" itemValue="SC"/>	 
+                    <f:selectItem itemLabel="SP" itemValue="SP"/>	 
+                    <f:selectItem itemLabel="SE" itemValue="SE"/>	 
+                    <f:selectItem itemLabel="TO" itemValue="TO"/>
+                </p:selectOneMenu>
+
+                <h:outputLabel value="CEP:" for="cep"/>
+                <p:inputText value="#{clienteBean.cliente.endereco.cep}" id="cep" />
+
+            </p:panelGrid>
+            
+            <p:commandButton value="Salvar" actionListener="#{clienteController.inserirAction(clienteBean.cliente)}"/>
+            
+        </h:form>
+
+    </h:body>
+</html>
+
