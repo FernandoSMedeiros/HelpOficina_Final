@@ -25,26 +25,39 @@
                 <p:fieldset toggleable="true" legend="Dados Cliente" collapsed="true">
 
                     <h:panelGrid columns="2">
-                    <h:outputLabel value="Nome do cliente:"/>
-                    <h:outputText value="#{clienteController.selectedCliente.nome}" />
-                    <h:outputLabel value="CPF: "/>
-                    <h:outputText value="#{clienteController.selectedCliente.cpf}" />
-                    <h:outputLabel value="RG: "/>
-                    <h:outputText value="#{clienteController.selectedCliente.rg}" />
-                    <h:outputLabel value="Orgão Expedidor:"/>
-                    <h:outputText value="#{clienteController.selectedCliente.expedidor}" />
+                        <h:outputLabel value="Nome do cliente:"/>
+                        <h:outputText value="#{ordemDeServicoBean.os.cliente.nome}" />
+                        <h:outputLabel value="CPF: "/>
+                        <h:outputText value="#{ordemDeServicoBean.os.cliente.cpf}" />
+                        <h:outputLabel value="RG: "/>
+                        <h:outputText value="#{ordemDeServicoBean.os.cliente.rg}" />
+                        <h:outputLabel value="Orgão Expedidor:"/>
+                        <h:outputText value="#{ordemDeServicoBean.os.cliente.expedidor}" />
 
                     </h:panelGrid>
-                    
+
                 </p:fieldset>
 
                 <p:fieldset toggleable="true" legend="Dados Produto" collapsed="true">
 
-                    oifdgh
+                     <h:panelGrid columns="2">
+                    
+                    <h:outputLabel value="Marca"/>
+                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.marca}"/>
+                    <h:outputLabel value="Tipo"/>
+                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.tipo}"/>
+                    <h:outputLabel value="Modelo"/>
+                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.modelo}"/>
+                    <h:outputLabel value="Serial"/>
+                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.serial}"/>
+                    <h:outputLabel value="Código de barras"/>
+                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.codBarra}"/>
 
+                     </h:panelGrid>
+                    
                 </p:fieldset>
 
-                <p:commandButton value="Salvar" />
+                <p:commandButton value="Salvar" actionListener="#{ordemServicoController.inserirAction(ordemDeServicoBean.os)}"/>
 
             </h:panelGrid>
 
@@ -74,17 +87,32 @@
                     </p:column>                 
 
                 </p:dataTable>
-                
-                <p:commandButton update="main" oncomplete="PF('widSelectCli').hide()"/>
-                
-            </h:form>
-            
-        </p:dialog>
-        
-         <p:dialog id="dialogAp" widgetVar="widSetAp" modal="true" closable="true" 
-                  closeOnEscape="true" draggable="false" width="821" height="300" resizable="false">
 
+                <p:commandButton update="main" oncomplete="PF('widSelectCli').hide()" actionListener="#{ordemDeServicoBean.os.setCliente(clienteController.selectedCliente)}"/>
+
+            </h:form>
+
+        </p:dialog>
+
+        <p:dialog id="dialogAp" widgetVar="widSetAp" modal="true" closable="true" 
+                  closeOnEscape="true" draggable="false" width="821" height="300" resizable="false" onShow="#{aparelhoBean.novo()}">
+
+            <h:form id="frmDialogAp">
             
+            <h:outputLabel value="Marca"/>
+            <p:inputText value="#{aparelhoBean.aparelho.marca}"/>
+            <h:outputLabel value="Tipo"/>
+            <p:inputText value="#{aparelhoBean.aparelho.tipo}"/>
+            <h:outputLabel value="Modelo"/>
+            <p:inputText value="#{aparelhoBean.aparelho.modelo}"/>
+            <h:outputLabel value="Serial"/>
+            <p:inputText value="#{aparelhoBean.aparelho.serial}"/>
+            <h:outputLabel value="Código de barras"/>
+            <p:inputText value="#{aparelhoBean.aparelho.codBarra}"/>
+
+            <p:commandButton update="main" oncomplete="PF('widSetAp').hide()" actionListener="#{ordemDeServicoBean.os.setAparelho(aparelhoBean.aparelho)}"/>
+
+            </h:form>
             
         </p:dialog>
 

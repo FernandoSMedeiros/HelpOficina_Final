@@ -41,7 +41,7 @@ public class OrdemServico implements Serializable {
 
     private Aparelho aparelho = new Aparelho();
 
-    private Pedido pedido;
+    //private Pedido pedido;
 
     private List<Acompanhamento> acomp = new ArrayList<>();
     private List<Orcamento> orcamento = new ArrayList<>();
@@ -111,7 +111,7 @@ public class OrdemServico implements Serializable {
         this.cliente = cliente;
     }
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     public Aparelho getAparelho() {
         return aparelho;
     }
@@ -120,14 +120,14 @@ public class OrdemServico implements Serializable {
         this.aparelho = aparelho;
     }
 
-    @OneToMany
-    public Pedido getPedido() {
-        return pedido;
-    }
-
-    public void setPedido(Pedido pedido) {
-        this.pedido = pedido;
-    }
+//    @OneToMany
+//    public Pedido getPedido() {
+//        return pedido;
+//    }
+//
+//    public void setPedido(Pedido pedido) {
+//        this.pedido = pedido;
+//    }
 
     
     @OneToMany(mappedBy = "ordemServico")

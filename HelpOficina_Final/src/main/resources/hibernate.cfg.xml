@@ -20,6 +20,11 @@
         <mapping class="model.entity.Cliente"/>
         <mapping class="model.entity.Endereco"/>
         <mapping class="model.entity.Telefone"/>
+        <mapping class="model.entity.OrdemServico"/>
+        <mapping class="model.entity.Aparelho"/>
+        
+        <mapping class="model.entity.Acompanhamento"/>
+        <mapping class="model.entity.Orcamento"/>
         
     
     </session-factory>
