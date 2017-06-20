@@ -12,17 +12,15 @@
         <ui:include src="menu.xhtml"/>
 
         <h:form id="main">
+            
+            <p:separator/>
 
-            <h:panelGrid columns="2">
-
-                <p:commandButton value="Selecionar Cliente" onclick = "PF('widSelectCli').show()"/>
-                <p:commandButton value="Adicionar aparelho" onclick = "PF('widSetAp').show()"/>
-
-            </h:panelGrid>
-
-            <h:panelGrid columns="2">
-
-                <p:fieldset toggleable="true" legend="Dados Cliente" collapsed="true">
+            <p:commandButton value="Selecionar Cliente" onclick = "PF('widSelectCli').show()"/>
+            <p:commandButton value="Adicionar aparelho" onclick = "PF('widSetAp').show()"/>
+            
+            <p:separator/>
+            
+            <p:fieldset toggleable="true" legend="Dados Cliente" collapsed="true">
 
                     <h:panelGrid columns="2">
                         <h:outputLabel value="Nome do cliente:"/>
@@ -38,28 +36,40 @@
 
                 </p:fieldset>
 
+                <p:separator/>
+                
                 <p:fieldset toggleable="true" legend="Dados Produto" collapsed="true">
 
-                     <h:panelGrid columns="2">
-                    
-                    <h:outputLabel value="Marca"/>
-                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.marca}"/>
-                    <h:outputLabel value="Tipo"/>
-                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.tipo}"/>
-                    <h:outputLabel value="Modelo"/>
-                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.modelo}"/>
-                    <h:outputLabel value="Serial"/>
-                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.serial}"/>
-                    <h:outputLabel value="Código de barras"/>
-                    <h:outputText value="#{ordemDeServicoBean.os.aparelho.codBarra}"/>
+                    <h:panelGrid columns="2">
 
-                     </h:panelGrid>
-                    
+                        <h:outputLabel value="Marca"/>
+                        <h:outputText value="#{ordemDeServicoBean.os.aparelho.marca}"/>
+                        <h:outputLabel value="Tipo"/>
+                        <h:outputText value="#{ordemDeServicoBean.os.aparelho.tipo}"/>
+                        <h:outputLabel value="Modelo"/>
+                        <h:outputText value="#{ordemDeServicoBean.os.aparelho.modelo}"/>
+                        <h:outputLabel value="Serial"/>
+                        <h:outputText value="#{ordemDeServicoBean.os.aparelho.serial}"/>
+                        <h:outputLabel value="Código de barras"/>
+                        <h:outputText value="#{ordemDeServicoBean.os.aparelho.codBarra}"/>
+
+                    </h:panelGrid>
+
                 </p:fieldset>
 
-                <p:commandButton value="Salvar" actionListener="#{ordemServicoController.inserirAction(ordemDeServicoBean.os)}"/>
+            <p:separator/>
 
-            </h:panelGrid>
+                <h:outputLabel value="Defeito: " for="def"/>            
+                <p:inputText value="#{ordemDeServicoBean.os.defeito}" size="50" id="def"/>
+
+            <p:separator/>
+                
+                <h:outputLabel value="Observações: " for="def"/>
+                <p:inputText value="#{ordemDeServicoBean.os.obs}" id="obs" size="50"/>
+            
+            <p:separator/>
+            
+            <p:commandButton value="Salvar" actionListener="#{ordemServicoController.inserirAction(ordemDeServicoBean.os)}"/>
 
         </h:form>
 
@@ -95,25 +105,25 @@
         </p:dialog>
 
         <p:dialog id="dialogAp" widgetVar="widSetAp" modal="true" closable="true" 
-                  closeOnEscape="true" draggable="false" width="821" height="300" resizable="false" onShow="#{aparelhoBean.novo()}">
+                  closeOnEscape="true" draggable="false" width="270" height="300" resizable="false" onShow="#{aparelhoBean.novo()}">
 
             <h:form id="frmDialogAp">
-            
-            <h:outputLabel value="Marca"/>
-            <p:inputText value="#{aparelhoBean.aparelho.marca}"/>
-            <h:outputLabel value="Tipo"/>
-            <p:inputText value="#{aparelhoBean.aparelho.tipo}"/>
-            <h:outputLabel value="Modelo"/>
-            <p:inputText value="#{aparelhoBean.aparelho.modelo}"/>
-            <h:outputLabel value="Serial"/>
-            <p:inputText value="#{aparelhoBean.aparelho.serial}"/>
-            <h:outputLabel value="Código de barras"/>
-            <p:inputText value="#{aparelhoBean.aparelho.codBarra}"/>
 
-            <p:commandButton update="main" oncomplete="PF('widSetAp').hide()" actionListener="#{ordemDeServicoBean.os.setAparelho(aparelhoBean.aparelho)}"/>
-
+                <h:outputLabel value="Marca"/>
+                <p:inputText value="#{aparelhoBean.aparelho.marca}"/>
+                <h:outputLabel value="Tipo"/>
+                <p:inputText value="#{aparelhoBean.aparelho.tipo}"/>
+                <h:outputLabel value="Modelo"/>
+                <p:inputText value="#{aparelhoBean.aparelho.modelo}"/>
+                <h:outputLabel value="Serial"/>
+                <p:inputText value="#{aparelhoBean.aparelho.serial}"/>
+                <h:outputLabel value="Código de barras"/>
+                <p:inputText value="#{aparelhoBean.aparelho.codBarra}"/>
+                <center>
+                    <p:commandButton value="Salvar" update="main" oncomplete="PF('widSetAp').hide()" actionListener="#{ordemDeServicoBean.os.setAparelho(aparelhoBean.aparelho)}"/>
+                </center>
             </h:form>
-            
+
         </p:dialog>
 
     </h:body>

@@ -9,7 +9,7 @@
         <property name="hibernate.connection.username">postgres</property>
         <property name="hibernate.connection.password">4446472854</property>
     
-        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/OS</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/OS</property>
     
         <property name="connection_pool_size">1</property>
     
