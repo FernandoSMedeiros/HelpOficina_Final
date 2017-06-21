@@ -29,10 +29,11 @@ public class UsuarioController implements InterfaceUsuarioController{
     
     private usuarioModel usuario = null;
     
-     FacesMessageUtil message = new FacesMessageUtil();
+     FacesMessageUtil message;
     
     public UsuarioController(){
         this.usuario = new usuarioModel();
+        this.message = new FacesMessageUtil();
     }
 
     @Override
@@ -47,7 +48,7 @@ public class UsuarioController implements InterfaceUsuarioController{
         } catch (NoResultException e) {
 
            
-            message.msgInfo("Logado com sucesso"+e.getMessage());
+            message.msgInfo("Não foi possivel logar"+e.getMessage());
 
         }
 
@@ -74,11 +75,13 @@ public class UsuarioController implements InterfaceUsuarioController{
     @Override
     public void inserirAction(Usuario t) {
        usuario.inserir(t);
+       message.msgInfo("Usuario cadastrado com sucesso");
     }
 
     @Override
     public void deletarAction(Usuario t) {
        usuario.deletar(t);
+       message.msgInfo("Usuario deletado com Sucesso");
     }
 
     @Override

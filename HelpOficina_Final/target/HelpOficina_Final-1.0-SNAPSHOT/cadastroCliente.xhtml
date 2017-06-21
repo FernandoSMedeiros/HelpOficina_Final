@@ -12,6 +12,9 @@
 
         <ui:include src="menu.xhtml"/>
         <h:form>
+            
+            <p:growl id="msgCad" sticky="true"/>
+            
             <p:panelGrid columns="4">        
 
                 <h:outputLabel value="CPF:" for="cpf"/>
@@ -80,7 +83,7 @@
 
             </p:panelGrid>
             
-            <p:commandButton value="Salvar" actionListener="#{clienteController.inserirAction(clienteBean.cliente)}"/>
+            <p:commandButton value="Salvar" actionListener="#{clienteController.inserirAction(clienteBean.cliente)}" update="msgCad"/>
             
         </h:form>
 

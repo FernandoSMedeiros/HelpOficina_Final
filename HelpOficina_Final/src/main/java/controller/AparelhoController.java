@@ -11,6 +11,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 import model.AparelhoModel;
 import model.entity.Aparelho;
+import util.FacesMessageUtil;
 
 /**
  *
@@ -21,14 +22,17 @@ import model.entity.Aparelho;
 public class AparelhoController implements InterfaceController<Aparelho>{
 
     private AparelhoModel aparelhoModel = null;
+    private FacesMessageUtil message;
 
     public AparelhoController() {
         this.aparelhoModel = new AparelhoModel();
+        this.message = new FacesMessageUtil();
     }
 
     @Override
     public void inserirAction(Aparelho t) {
         aparelhoModel.inserir(t);
+        message.msgInfo("Cadastrado com Sucesso");
     }
 
     @Override

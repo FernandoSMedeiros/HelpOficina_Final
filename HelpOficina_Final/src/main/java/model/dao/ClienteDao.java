@@ -8,6 +8,9 @@ package model.dao;
 import java.util.List;
 import model.entity.Cliente;
 import model.dao.interfaces.Dao;
+import model.dao.interfaces.DaoCliente;
+import model.entity.Endereco;
+import model.entity.Telefone;
 import org.hibernate.Session;
 import util.HibernateUtil;
 
@@ -15,7 +18,7 @@ import util.HibernateUtil;
  *
  * @author Fernando
  */
-public class ClienteDao implements Dao<Cliente> {
+public class ClienteDao implements DaoCliente {
 
     private static ClienteDao clienteDao;
 
@@ -100,6 +103,22 @@ public class ClienteDao implements Dao<Cliente> {
         }
         
         return session.createQuery("FROM " + Cliente.class.getName()).getResultList();
+    }
+    
+    @Override
+    public Cliente infoCliente(Cliente cliente){
+    
+        if( ! session.isOpen()){
+            session = HibernateUtil.getSession();
+        }
+        
+        List<Telefone> tel = session.createQuery("From" + Telefone.class.getName() + "Where cliente_idCliente ="+cliente.getIdCliente()).getResultList();
+        Endereco end = (Endereco) session.createQuery("From"+Endereco.class.getName() + "Where cliente_idCliente =" +cliente.getIdCliente()).getSingleResult();
+        
+        cliente.setTel(tel);
+        cliente.setEndereco(end);
+        
+        return cliente;
     }
 
 }

@@ -40,6 +40,9 @@
 
         <p:dialog  id="cad" closable="true" draggable="false" resizable="false" 
                    widgetVar="widCad" header="Cadastrar Usuario" modal="true">
+            
+            <p:growl id="cadU" showDetail="true" sticky="true"/>
+            
             <h:form>
                    <h:outputLabel value="Nome de Usuario:" /> 
                    <p:inputText required="true"  value="#{usuarioBean.usuario.nomeUsuario}" requiredMessage="Campo nome do usuario é obrigatório"/>
@@ -47,7 +50,7 @@
                     <p:inputMask mask="999.999.999-99" value="#{usuarioBean.usuario.cpf}" id="cpfMask" required="true" requiredMessage="CPF é um campo Obrigatorio seu merda"/>
                     <h:outputLabel value="Senha:"/> 
                     <p:password  value="#{usuarioBean.usuario.senha}" required="true" requiredMessage="Preciso Dizer?"/>
-                    <p:commandButton value="Cadastrar" actionListener="#{usuarioController.inserirAction(usuarioBean.usuario)}" oncomplete="PF('widCad').hide()" action="#{usuarioBean.novo()}"/>
+                    <p:commandButton value="Cadastrar" actionListener="#{usuarioController.inserirAction(usuarioBean.usuario)}" oncomplete="PF('widCad').hide()" action="#{usuarioBean.novo()}" update="cadU"/>
             </h:form> 
         </p:dialog>
 

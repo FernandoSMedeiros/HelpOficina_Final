@@ -7,7 +7,7 @@ package model;
 
 import java.util.List;
 import model.dao.ClienteDao;
-import model.dao.interfaces.Dao;
+import model.dao.interfaces.DaoCliente;
 import model.entity.Cliente;
 import model.interfaces.InterfaceModel;
 
@@ -17,7 +17,7 @@ import model.interfaces.InterfaceModel;
  */
 public class ClienteModel  implements InterfaceModel<Cliente>{
     
-    private Dao<Cliente> dao = ClienteDao.getInstance();
+    private DaoCliente dao = ClienteDao.getInstance();
 
     @Override
     public void inserir(Cliente t) {
@@ -40,6 +40,9 @@ public class ClienteModel  implements InterfaceModel<Cliente>{
     }
     
     
+    public Cliente infoCliente(Cliente cli){
+      return dao.infoCliente(cli);
+    }
     
     
 }
