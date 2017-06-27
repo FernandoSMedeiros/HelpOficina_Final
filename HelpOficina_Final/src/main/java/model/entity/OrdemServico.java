@@ -19,6 +19,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import java.sql.Timestamp;
+import java.util.Calendar;
 
 /**
  *
@@ -30,7 +32,7 @@ public class OrdemServico implements Serializable {
 
     private Integer id_os;
 
-    private Date dataEntrada;
+    private Calendar dataEntrada;
     private Date dataConserto;
     private Date dataEntrega;
 
@@ -58,11 +60,11 @@ public class OrdemServico implements Serializable {
 
     @Column(name = "DataEntrada", columnDefinition = "DATE")
     @Temporal(TemporalType.TIMESTAMP)
-    public Date getDataEntrada() {
+    public Calendar getDataEntrada() {
         return dataEntrada;
     }
 
-    public void setDataEntrada(Date dataEntrada) {
+    public void setDataEntrada(Calendar dataEntrada) {
         this.dataEntrada = dataEntrada;
     }
 

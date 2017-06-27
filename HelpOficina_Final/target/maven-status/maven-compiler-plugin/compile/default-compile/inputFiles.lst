@@ -1,39 +1,48 @@
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\interfaces\InterfaceUsuario.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\teste\Teste.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\dao\interfaces\Dao.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\interfaces\InterfaceUsuarioController.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\usuarioModel.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\ClienteController.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\util\SessionUtil.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\util\ControleDeAcesso.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\interfaces\InterfaceModel.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Orcamento.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\beans\ClienteBean.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\beans\UsuarioBean.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Pedido.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Telefone.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Aparelho.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\dao\UsuarioDao.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\util\HibernateUtil.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Endereco.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\EnderecoModel.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\ClienteModel.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\dao\EnderecoDao.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Cliente.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\dao\TelefoneDao.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\EnderecoController.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\interfaces\InterfaceController.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\util\FacesDialogUtil.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Acompanhamento.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\TelefoneController.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\beans\EnderecoBean.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\dao\ClienteDao.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\beans\TelefoneBean.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Peca.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\TelefoneModel.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\util\FacesMessageUtil.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\controller\UsuarioController.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\OrdemServico.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\dao\OrcamentoDao.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\entity\Usuario.java
-D:\Projetos Java\HelpOficina_Final\src\main\java\model\dao\interfaces\DaoUsuario.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\util\HibernateUtil.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Telefone.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\ClienteController.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\interfaces\InterfaceUsuarioController.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Endereco.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\AparelhoModel.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\beans\OrdemDeServicoBean.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\beans\TelefoneBean.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\OrdemServicoModel.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\beans\ClienteBean.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\interfaces\InterfaceModel.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\OrdemServico.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\beans\AparelhoBean.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\beans\EnderecoBean.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\util\ControleDeAcesso.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Usuario.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\interfaces\InterfaceController.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\UsuarioController.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\interfaces\DaoUsuario.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\EnderecoModel.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\OrdemServicoDao.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Orcamento.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Peca.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\TelefoneController.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Acompanhamento.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Cliente.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\util\SessionUtil.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\teste\Teste.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\util\FacesMessageUtil.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\util\FacesDialogUtil.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\beans\UsuarioBean.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\interfaces\Dao.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\ClienteDao.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Pedido.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\interfaces\InterfaceUsuario.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\usuarioModel.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\EnderecoController.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\EnderecoDao.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\TelefoneModel.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\AparelhoController.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\AparelhoDao.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\controller\OrdemServicoController.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\UsuarioDao.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\interfaces\DaoCliente.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\OrcamentoDao.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\dao\TelefoneDao.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\entity\Aparelho.java
+C:\Users\Fernando\Documents\GitHub\HelpOficina_Final\HelpOficina_Final\src\main\java\model\ClienteModel.java

@@ -102,7 +102,9 @@ public class ClienteDao implements DaoCliente {
             session = HibernateUtil.getSession();
         }
         
-        return session.createQuery("FROM " + Cliente.class.getName()).getResultList();
+        List <Cliente> lista =  session.createQuery("FROM " + Cliente.class.getName()).getResultList();
+        
+        return lista;
     }
     
     @Override
