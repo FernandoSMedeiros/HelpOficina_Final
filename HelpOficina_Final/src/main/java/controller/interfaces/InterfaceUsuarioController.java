@@ -14,5 +14,7 @@ import model.entity.Usuario;
 public interface InterfaceUsuarioController extends InterfaceController<Usuario>{
     
     public void loginAction(String cpf, String senha);
+    
+    public void logOut();
            
 }

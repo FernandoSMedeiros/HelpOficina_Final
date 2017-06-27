@@ -63,6 +63,25 @@
                 </p:panelGrid>
                 <p:commandButton value="Fechar" oncomplete="PF('widDialVisuCli').hide()"/>
             </p:dialog>
+            
+            <p:dialog header="Editar Cliente" widgetVar="widDialEditaCli"  id="editaCli"
+                      draggable="false" modal="true" resizable="false"
+                      showEffect="fade" hideEffect="fade">
+                <p:panelGrid columns="2">
+                    <h:outputText value="Nome"/>
+                    <h:inputText value="#{clienteController.selectedCliente.nome}"/>
+                    <h:outputText value="CPF"/>
+                    <h:inputText value="#{clienteController.selectedCliente.cpf}"/>
+                    <h:outputText value="RG"/>
+                    <h:inputText value="#{clienteController.selectedCliente.rg}"/>
+                    <h:outputText value="Orgão Expedidor"/>
+                    <h:inputText value="#{clienteController.selectedCliente.expedidor}"/>
+                    
+
+                </p:panelGrid>
+                <p:commandButton value="Fechar" oncomplete="PF('widDialVisuCli').hide()"/>
+            </p:dialog>
+
 
         </h:form>        
 

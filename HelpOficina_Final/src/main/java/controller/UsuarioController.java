@@ -71,7 +71,7 @@ public class UsuarioController implements InterfaceUsuarioController{
 
         }
     }
-    
+        
     @Override
     public void inserirAction(Usuario t) {
        usuario.inserir(t);
@@ -92,6 +92,16 @@ public class UsuarioController implements InterfaceUsuarioController{
     @Override
     public List<Usuario> recuperarTodosAction() {
         return usuario.recuperarTodos();
+    }
+
+    @Override
+    public void logOut() {
+        SessionUtil.invalidate();
+        try {
+            Faces.redirect("login.xhtml");
+        } catch (IOException ex) {
+            message.msgInfo("Logout realizado com sucesso");
+        }
     }
 
     

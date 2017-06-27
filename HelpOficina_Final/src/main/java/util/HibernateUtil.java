@@ -18,8 +18,7 @@ import org.hibernate.cfg.Configuration;
  */
 public class HibernateUtil {
 
-    private static SessionFactory sessionFactory;
-    private static Session session;
+    private static SessionFactory sessionFactory;    
     
     public static SessionFactory getSessionFactory() throws MappingException {
         if (sessionFactory == null) {

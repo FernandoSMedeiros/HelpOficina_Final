@@ -83,7 +83,7 @@
 
             </p:panelGrid>
             
-            <p:commandButton value="Salvar" actionListener="#{clienteController.inserirAction(clienteBean.cliente)}" update="msgCad"/>
+            <p:commandButton value="Salvar" actionListener="#{clienteController.inserirAction(clienteBean.cliente)}" action="#{clienteBean.novo()}" update="@form"/>
             
         </h:form>
 

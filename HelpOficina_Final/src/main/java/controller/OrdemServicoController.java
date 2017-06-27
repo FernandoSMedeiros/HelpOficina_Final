@@ -22,6 +22,8 @@ public class OrdemServicoController implements InterfaceController<OrdemServico>
 
     private OrdemServicoModel os = new OrdemServicoModel();
     
+    private OrdemServico selectedOs;
+    
     @Override
     public void inserirAction(OrdemServico t) {
         os.inserir(t);
@@ -42,6 +44,12 @@ public class OrdemServicoController implements InterfaceController<OrdemServico>
         return os.recuperarTodos();
     }
     
-    
+    public OrdemServico getSelectedOs() {
+        return selectedOs;
+    }
+
+    public void setSelectedOs(OrdemServico selectedOs) {
+        this.selectedOs = selectedOs;
+    }
     
 }
