@@ -114,8 +114,8 @@ public class ClienteDao implements DaoCliente {
             session = HibernateUtil.getSession();
         }
         
-        List<Telefone> tel = session.createQuery("From" + Telefone.class.getName() + "Where cliente_idCliente ="+cliente.getIdCliente()).getResultList();
-        Endereco end = (Endereco) session.createQuery("From"+Endereco.class.getName() + "Where cliente_idCliente =" +cliente.getIdCliente()).getSingleResult();
+        List<Telefone> tel = session.createQuery("From " + Telefone.class.getName() + "Where cliente_idCliente ="+cliente.getIdCliente()).getResultList();
+        Endereco end = (Endereco) session.createQuery("From "+Endereco.class.getName() + "Where cliente_idCliente =" +cliente.getIdCliente()).getSingleResult();
         
         cliente.setTel(tel);
         cliente.setEndereco(end);
